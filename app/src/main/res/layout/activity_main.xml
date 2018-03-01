@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lolo.recuperacionmanuelmorillamanzano.MainActivity">
+
+    <TextView
+        android:id="@+id/tvLocalizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:text="Localizador Poblaciones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <EditText
+        android:id="@+id/etLocalidad"
+        android:layout_width="186dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:hint="Introduzca Localidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/etLocalidad"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:onClick="buscar"
+        android:text="BUSCAR"
+        tools:text="BUSCAR" />
+
+    <TextView
+        android:id="@+id/txtLatitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnBuscar"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="57dp"
+        android:text="TextView"
+        tools:text="Latitud" />
+
+    <TextView
+        android:id="@+id/txtLongitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLatitud"
+        android:layout_alignStart="@+id/txtLatitud"
+        android:layout_below="@+id/latitudTexto"
+        android:layout_marginTop="29dp"
+        android:text="Longitud" />
+
+    <TextView
+        android:id="@+id/txtCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLongitud"
+        android:layout_alignStart="@+id/txtLongitud"
+        android:layout_below="@+id/txtLongitud"
+        android:layout_marginTop="45dp"
+        android:text="Codigo de Pais:" />
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCodigo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:onClick="mostrar"
+        android:text="MOSTRAR EN MAPA" />
+
+    <EditText
+        android:id="@+id/latitudTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtLatitud"
+        android:layout_alignBottom="@+id/txtLatitud"
+        android:layout_toEndOf="@+id/etLocalidad"
+        android:layout_toRightOf="@+id/etLocalidad" />
+
+    <EditText
+        android:id="@+id/longitudTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtLongitud"
+        android:layout_alignBottom="@+id/txtLongitud"
+        android:layout_alignLeft="@+id/latitudTexto"
+        android:layout_alignStart="@+id/latitudTexto"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/codigoTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtCodigo"
+        android:layout_alignBottom="@+id/txtCodigo"
+        android:layout_alignLeft="@+id/longitudTexto"
+        android:layout_alignStart="@+id/longitudTexto" />
+
+    <Button
+        android:id="@+id/btnPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtCodigo"
+        android:layout_alignStart="@+id/txtCodigo"
+        android:layout_below="@+id/btnMostrar"
+        android:layout_marginTop="33dp"
+        android:text="Shared Preferences" />
+
+</RelativeLayout>
